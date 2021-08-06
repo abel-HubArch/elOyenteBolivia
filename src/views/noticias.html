@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Noticias</title>
+    <meta name="author" content="El Oyente" />
+    <meta name="copyright" content="Derechos recervados a El Oyente Bolivia" />
+    <meta name="robots" content="index"/>
+    <meta name="robots" content="follow"/>
+    <meta name="description" content="Mira noticias sobre la politica y aprende de ello">
+    <meta property="og:type" content="blog" />
+    <meta property="og:title" content="Noticias"/>
+    <meta property="og:description" content="tu opinion sobre la politica" />
+    <meta property="og:image" content="https://scontent.flpb2-2.fna.fbcdn.net/v/t1.6435-9/198618204_105449848439909_4617737297141361452_n.png?_nc_cat=101&ccb=1-3&_nc_sid=09cbfe&_nc_ohc=5AbTrq4CeWoAX9gBkRn&_nc_oc=AQkpxDNIOdjn73Rat2EDDKzu9GIqkwdztsta6qUvZerJNxrrcA0wrtYO4TVip1hp3-I&_nc_ht=scontent.flpb2-2.fna&oh=ba07c282e1835e53abc8038882b1a49f&oe=612DF9E0" />
+    <meta property="og:url" content=”elOyente.com.bo/noticias” />
+
+    
+    <%- include ('components/estilos.html')%>
+</head>
+<body>
+    <%- include ('components/navigation.html')%>
+
+    <div class="index">
+        <div class="tituloNoticiasRecientes">
+            <h1>Noticias Recientes</h1>
+        </div>
+        <% Object.values(noticias).forEach(function(noticia){%>
+    <a href="noticias/<%= noticia.id%>">
+        <div class="NoticiasRecientes">
+            <div class="portada sobreado">
+                <div class="portadaNoticia"
+                    style="background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),url('<%= noticia.img%>');">
+                    <div class="titulo">
+                        <h1><%= noticia.titulo %></h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </a>
+        <%})%>
+
+    </div> 
+
+</body>
+</html>

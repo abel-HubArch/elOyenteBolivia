@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= noticia.titulo %></title>
+    <meta name="author" content="El Oyente" />
+    <meta name="copyright" content="Derechos recervados a El Oyente Bolivia" />
+    <meta name="robots" content="index"/>
+    <meta name="robots" content="follow"/>
+    <meta name="description" content="<%= noticia.resumen %>">
+    <meta property="og:type" content="blog" />
+    <meta property="og:title" content="<%= noticia.titulo %>"/>
+    <meta property="og:description" content="<%= noticia.resumen %>" />
+    <meta property="og:image" content="<%= noticia.imgGraph%>" />
+    <meta property="og:url" content="visionesPoliticas/<%= noticia.noticiaId%>"/>
+    
+    <%- include ('components/estilos.html')%>
+    <div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v11.0" nonce="v1wVH4Kd"></script>
+</head>
+<body>
+    <%- include ('components/navigation.html')%>
+
+
+    <div class="index">
+        <div class="texto">
+        <div class="tituloNoticiasRecientes">
+            <h1><%= noticia.titulo %></h1>
+        </div>
+        <div class="card-body">
+            <p class="card-text"><%= noticia.resumen %></p>
+          </div>
+        <div class="NoticiasRecientes">
+            <div class="portada sobreado">
+                <div class="portadaNoticia"
+                    style="background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),url('<%= noticia.imgGraph%>');">
+                </div>
+            </div>
+            <div class="card-footer text-muted">
+                <%= noticia.fecha %>
+              </div>
+            
+        </div>
+        <div class="card-body">
+            <p class="card-text"><%= noticia.noticia %></p>
+         </div>
+         <div class="NoticiasRecientes">
+            <div class="portada sobreado">
+                <div class="portadaNoticia"
+                    style="background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),url('<%= noticia.img%>');">
+                </div>
+            </div>
+        
+
+            <div class="opinion">
+               <h1>Escribe tu opinion!</h1>
+        </div>
+    </div>
+</div>
+</div>
+          
+          
+
+</body>
+</html>
