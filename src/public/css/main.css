@@ -95,10 +95,10 @@ font-weight: 800;
         margin: auto;
     }
     .index .NoticiasRecientes .portada .portadaNoticia{
-        height: 35vh;
+        height: 30vh;
     }
     .index .NoticiasRecientes .semiPortadas{
-        width: 600px;
+      width: 370px;
       margin: auto;
       padding-top: 30px;
       margin-bottom: 30px;
@@ -111,6 +111,11 @@ font-weight: 800;
         width: 100%;
         height: 20vh;
     }
+}
+@media screen and (min-height: 413px){
+    .index .NoticiasRecientes .semiPortadas{
+       width: 100%;
+      }
 }
 @media screen and (min-height: 907px){
     .index .NoticiasRecientes .portada .portadaNoticia{
