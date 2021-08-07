@@ -123,6 +123,10 @@ font-weight: 800;
     }
 }
 @media screen and (min-width: 630px){
+    .index .NoticiasRecientes .semiPortadas{
+        width: 600px;
+       }
+ 
     .index .texto{
         width: 600px;
         margin: auto;
